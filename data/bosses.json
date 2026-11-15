@@ -3,7 +3,7 @@
 	{
 	  "id": "boss_school",
 	  "layer": "school",
-	  "name": "Bayangan Papan Tulis",
+	  "name": "Bu Guru",
 	  "hp": 22,
 	  "flashback": "Rasanya kamu kembali ke ruangan yang penuh dengan rasa kecewa dan amarah, semua wangi dan suara itu merasuki tubuhmu",
 	  "pattern": "constant_shift",
@@ -20,9 +20,9 @@
 	{
 	  "id": "boss_family",
 	  "layer": "family",
-	  "name": "Meja Makan Sunyi",
+	  "name": "Jam Dinding Tua",
 	  "hp": 27,
-	  "flashback": "Detak jam dinding di ruang makan yang sepi. Ada kalimat penting yang selalu hampir terucap... dan tak pernah sampai.",
+	  "flashback": "Detak jam dinding di ruang makan yang sepi dan semua kata yang tidak pernah diucapkan disana",
 	  "pattern": "alternating_shift",
 	  "params": {
 		"shift_a": -1,
@@ -38,9 +38,9 @@
 	{
 	  "id": "boss_childhood",
 	  "layer": "childhood",
-	  "name": "Cermin Retak",
+	  "name": "Bebek Gila",
 	  "hp": 32,
-	  "flashback": "Sosok kecil bersembunyi di sudut kamar yang gelap, terlalu takut untuk melangkah keluar. Ia menatapmu dari balik retakan.",
+	  "flashback": "Sosok kecil yang gila karna ditinggalkan olehmu",
 	  "pattern": "mirror_push",
 	  "params": {
 		"push": 2,

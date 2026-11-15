@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://cm8svtm5fh5dl"]
 
-[ext_resource type="Script" path="res://scripts/ending.gd" id="1_end"]
+[ext_resource type="Script" uid="uid://clcaipkmo3l2m" path="res://scripts/ending.gd" id="1_end"]
 [ext_resource type="FontVariation" path="res://assets/ui/font_bold.tres" id="9_fontb"]
 
-[node name="Ending" type="Control"]
+[node name="Ending" type="Control" unique_id=1359424430]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_end")
 
-[node name="Bg" type="ColorRect" parent="."]
+[node name="Bg" type="ColorRect" parent="." unique_id=57599718]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.05, 0.06, 0.09, 1)
 
-[node name="Center" type="CenterContainer" parent="."]
+[node name="Center" type="CenterContainer" parent="." unique_id=112899708]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,11 +30,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBox" type="VBoxContainer" parent="Center"]
+[node name="VBox" type="VBoxContainer" parent="Center" unique_id=1576075963]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Text" type="Label" parent="Center/VBox"]
+[node name="Text" type="Label" parent="Center/VBox" unique_id=673511214]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(900, 140)
 layout_mode = 2
@@ -43,17 +43,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Title" type="Label" parent="Center/VBox"]
+[node name="Title" type="Label" parent="Center/VBox" unique_id=896816391]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.3, 0.17, 0.06, 1)
-theme_override_font_sizes/font_size = 72
 theme_override_fonts/font = ExtResource("9_fontb")
+theme_override_font_sizes/font_size = 72
 text = "MEMOIRE"
 horizontal_alignment = 1
 
-[node name="MenuButton" type="Button" parent="Center/VBox"]
+[node name="MenuButton" type="Button" parent="Center/VBox" unique_id=1464612545]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(300, 54)

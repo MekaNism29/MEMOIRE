@@ -6,6 +6,10 @@ const OVERLAY := preload("res://scenes/remember_overlay.tscn")
 const SIZE := Vector2(160, 220)
 
 @export var boss_id := "boss_school"
+## Optional: your own gate art (transparent PNG). Empty = gate drawn with code.
+@export var gate_texture: Texture2D
+## Optional: art after the boss is absorbed. Empty = gate_texture is darkened.
+@export var gate_done_texture: Texture2D
 
 var _t := 0.0
 
@@ -37,6 +41,9 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
+	if gate_texture != null:
+		_draw_gate_art()
+		return
 	var boss: Dictionary = GameState.get_boss(boss_id)
 	var g: Array = boss.get("glow", [0.6, 0.7, 1.0])
 	var col := Color(float(g[0]), float(g[1]), float(g[2]))
@@ -54,3 +61,17 @@ func _draw() -> void:
 			var p := Vector2(sin(a * 1.3) * 50.0, cos(a) * 80.0)
 			draw_circle(p, 5.0 + 3.0 * sin(a * 2.0), Color(col.r, col.g, col.b, 0.5))
 	draw_rect(r, col, false, 4.0)
+
+
+func _draw_gate_art() -> void:
+	var tex: Texture2D = gate_texture
+	var tint := Color(1, 1, 1, 1)
+	if GameState.is_defeated(boss_id):
+		if gate_done_texture != null:
+			tex = gate_done_texture
+		else:
+			tint = Color(0.4, 0.42, 0.5, 1)
+	# height = gate height, width follows the image; feet on the floor
+	var k: float = SIZE.y / tex.get_height()
+	var ds: Vector2 = tex.get_size() * k
+	draw_texture_rect(tex, Rect2(Vector2(-ds.x / 2.0, SIZE.y / 2.0 - ds.y), ds), false, tint)

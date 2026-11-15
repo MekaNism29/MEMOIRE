@@ -1,58 +1,62 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene format=3 uid="uid://dhpsb35g2pevy"]
 
-[ext_resource type="Script" path="res://scripts/hub.gd" id="1_lvl"]
+[ext_resource type="Script" uid="uid://tnqpsiqrfg74" path="res://scripts/hub.gd" id="1_lvl"]
 [ext_resource type="PackedScene" path="res://scenes/platform.tscn" id="2_plat"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://bbxljiss7i3k2" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="Texture2D" uid="uid://bfvyhndsubltj" path="res://assets/portals/open/open/open_09.png" id="4_2hkft"]
 [ext_resource type="PackedScene" path="res://scenes/exploration_hud.tscn" id="4_hud"]
-[ext_resource type="PackedScene" path="res://scenes/boss_gate.tscn" id="6_gate"]
+[ext_resource type="Texture2D" uid="uid://c14bm61mv3jhw" path="res://assets/portals/open1/open/open_09.png" id="5_4oyfp"]
+[ext_resource type="Texture2D" uid="uid://de563mvdfqrfm" path="res://assets/portals/open2/open/open_09.png" id="6_lcd1r"]
 [ext_resource type="PackedScene" path="res://scenes/portal.tscn" id="7_portal"]
 [ext_resource type="PackedScene" path="res://scenes/wake_light.tscn" id="8_wake"]
 
-[node name="Hub" type="Node2D"]
+[node name="Hub" type="Node2D" unique_id=187541573]
 script = ExtResource("1_lvl")
 layer_id = "hub"
 layer_title = "DASAR ALAM BAWAH SADAR"
 world_width = 2000
-bg_color = Color(0.05, 0.06, 0.09, 1)
 decor_color = Color(0.09, 0.1, 0.15, 1)
 
-[node name="Platforms" type="Node2D" parent="."]
+[node name="Platforms" type="Node2D" parent="." unique_id=350438210]
 
-[node name="P1" parent="Platforms" instance=ExtResource("2_plat")]
+[node name="P1" parent="Platforms" unique_id=1588098812 instance=ExtResource("2_plat")]
 position = Vector2(0, 640)
 size = Vector2(2000, 80)
 color = Color(0.27, 0.32, 0.42, 1)
 
-[node name="Interactables" type="Node2D" parent="."]
+[node name="Interactables" type="Node2D" parent="." unique_id=1428106594]
 
-[node name="PortalSchool" parent="Interactables" instance=ExtResource("7_portal")]
+[node name="PortalSchool" parent="Interactables" unique_id=1630549390 instance=ExtResource("7_portal")]
 position = Vector2(400, 540)
 target_scene = "res://scenes/level_school.tscn"
 door_name = "Lapisan Sekolah"
-door_color = Color(0.55, 0.75, 1.0, 1)
+door_color = Color(0.55, 0.75, 1, 1)
+door_texture = ExtResource("4_2hkft")
 
-[node name="PortalFamily" parent="Interactables" instance=ExtResource("7_portal")]
+[node name="PortalFamily" parent="Interactables" unique_id=123382679 instance=ExtResource("7_portal")]
 position = Vector2(800, 540)
 target_scene = "res://scenes/level_family.tscn"
 required_boss = "boss_school"
 door_name = "Lapisan Keluarga"
-door_color = Color(1.0, 0.75, 0.5, 1)
+door_color = Color(1, 0.75, 0.5, 1)
+door_texture = ExtResource("5_4oyfp")
 
-[node name="PortalChildhood" parent="Interactables" instance=ExtResource("7_portal")]
+[node name="PortalChildhood" parent="Interactables" unique_id=883865372 instance=ExtResource("7_portal")]
 position = Vector2(1200, 540)
 target_scene = "res://scenes/level_childhood.tscn"
 required_boss = "boss_family"
 door_name = "Lapisan Masa Kecil"
-door_color = Color(0.8, 0.65, 1.0, 1)
+door_color = Color(0.8, 0.65, 1, 1)
+door_texture = ExtResource("6_lcd1r")
 
-[node name="WakeLight" parent="Interactables" instance=ExtResource("8_wake")]
+[node name="WakeLight" parent="Interactables" unique_id=1955645004 instance=ExtResource("8_wake")]
 position = Vector2(1650, 520)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1427665752]
 
-[node name="Spawn" type="Marker2D" parent="."]
+[node name="Spawn" type="Marker2D" parent="." unique_id=606944564]
 position = Vector2(150, 616)
 
-[node name="Player" parent="." instance=ExtResource("3_player")]
+[node name="Player" parent="." unique_id=420089144 instance=ExtResource("3_player")]
 
-[node name="HUD" parent="." instance=ExtResource("4_hud")]
+[node name="HUD" parent="." unique_id=118981472 instance=ExtResource("4_hud")]

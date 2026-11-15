@@ -89,4 +89,32 @@ Dibuat oleh Mikael, Fardan, dan Rizki untuk Hack Club. Inspirasi: Hollow Knight 
 
 Sebagian pembuatan game ini dibantu AI.
 
-Folder `assets/temporary/` masih berisi background dan tileset sementara.
+## Aset dan sumber
+
+Latar
+- Eerie Playground Night, Stockcake: https://stockcake.com/es/i/eerie-playground-night_662097_1053853
+- Pinterest: https://id.pinterest.com/pin/775463629628933476/
+- Dibuat dengan Craiyon (craiyon.com): https://www.craiyon.com/en/image/5hf_0kSDT12O7LMCWovcbg
+
+Karakter dan bos
+- Free Schoolgirls Anime Character Pixel Sprite Pack, CraftPix.net: https://craftpix.net/freebies/free-schoolgirls-anime-character-pixel-sprite-pack/
+
+Portal
+- Free Pixel Portals and Runes, Miraforge (itch.io): https://miraforge.itch.io/free-pixel-portals-and-runes
+
+Musik
+- Dark Cinematic Atmosphere, Pixabay: https://pixabay.com/sound-effects/musical-dark-cinematic-atmosphere-621937/
+- He's Breaking (orchestral haunting sad contemplation), Zapsplat: https://www.zapsplat.com/music/hes-breaking-orchestral-haunting-sad-contemplation-good-for-serious-scenes/
+- 8-Bit Afterglow (slow shimmer version), Zapsplat: https://www.zapsplat.com/music/8-bit-afterglow-slow-shimmer-version-ambient-royalty-free-music-loop-shimmering-slow-chilled/
+- Glimmer (ambient drone from bagpipe), Zapsplat: https://www.zapsplat.com/music/glimmer-ambient-drone-from-bagpipe-instrumental/
+- Stardust Render (effects version), Zapsplat: https://www.zapsplat.com/music/stardust-render-effects-version-royalty-free-music-loop-simple-fun-8-bit-chiptune-reverb-effects/
+
+Efek suara
+- Subtle UI Button Click, Pixabay: https://pixabay.com/sound-effects/film-special-effects-subtle-ui-button-click-606324/
+- Horror Impact Hit, Pixabay: https://pixabay.com/sound-effects/horror-horror-impact-hit-567238/
+- Punch Impact Hit, Pixabay: https://pixabay.com/sound-effects/film-special-effects-punch-impact-hit-567196/
+- Impact Cinematic Boom 03, Pixabay: https://pixabay.com/sound-effects/film-special-effects-impact-cinematic-boom-03-567239/
+- Phone Pick Up, Pixabay: https://pixabay.com/sound-effects/film-special-effects-phone-pick-up-46796/
+- Whoosh Jump, Myinstants: https://www.myinstants.com/en/instant/whoosh-jump-39155/
+
+Kredit audio: Sound from Zapsplat.com

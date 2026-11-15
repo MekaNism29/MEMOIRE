@@ -23,6 +23,7 @@ func _ready() -> void:
     cam.limit_right = world_width
     cam.limit_top = 0
     cam.limit_bottom = 720
+    _add_walls()
     player.global_position = spawn.global_position
     if GameState.respawn_at_boss and has_node("BossSpawn"):
         player.global_position = $BossSpawn.global_position
@@ -33,6 +34,21 @@ func _ready() -> void:
     if has_node("HUD"):
         $HUD.show_banner(layer_title, 2.5)
     queue_redraw()
+
+# Invisible walls at both ends of the level, exactly where the camera stops,
+# so the player can't walk out of the camera area.
+func _add_walls() -> void:
+    for side in [-1, 1]:
+        var wall := StaticBody2D.new()
+        wall.collision_layer = 1
+        wall.collision_mask = 0
+        var shape := RectangleShape2D.new()
+        shape.size = Vector2(40, 4000)
+        var cs := CollisionShape2D.new()
+        cs.shape = shape
+        wall.add_child(cs)
+        wall.position = Vector2(-20.0 if side < 0 else float(world_width) + 20.0, 360.0)
+        add_child(wall)
 
 func _physics_process(_delta: float) -> void:
     if player.global_position.y > kill_y:

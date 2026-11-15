@@ -22,7 +22,11 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
     if _tex != null:
-        draw_texture_rect(_tex, Rect2(Vector2.ZERO, size), false)
+        var ts := _tex.get_size()
+        var k := minf(size.x / ts.x, size.y / ts.y)
+        var draw_size := ts * k
+        var pos := Vector2((size.x - draw_size.x) / 2.0, size.y - draw_size.y)
+        draw_texture_rect(_tex, Rect2(pos, draw_size), false)
         return
     match boss_id:
         "boss_school":

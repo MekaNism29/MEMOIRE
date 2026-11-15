@@ -45,7 +45,7 @@ theme_override_constants/separation = 24
 
 [node name="BossSprite" type="Control" parent="Margin/Main/BossRow"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(220, 110)
+custom_minimum_size = Vector2(220, 150)
 layout_mode = 2
 script = ExtResource("2_boss")
 

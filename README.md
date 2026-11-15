@@ -1,8 +1,8 @@
-# 🕯️ ECHOES BACK
+# MEMOIRE
 
 > *"Seorang manusia biasa terbangun tanpa ingatan di kedalaman alam bawah sadarnya sendiri; alih-alih menghapus luka masa lalu, ia harus menghadapi setiap trauma, memantul balik dari keterpurukan emosional, dan menyerap setiap ingatan pahit menjadi kekuatan untuk kembali bangun ke dunia nyata."*
 
-**Echoes Back** *(judul kerja sebelumnya: Lorem Ipsum)* adalah game aksi-petualangan eksplorasi **2D side-scrolling** yang dipadukan dengan pertarungan kartu taktis berbasis giliran (**turn-based deckbuilding**). Dibangun dalam waktu **48 jam** untuk ajang **Hack Club** dengan tema **"Bounce Back"**.
+**MEMOIRE** *(judul kerja sebelumnya: Echoes Back)* adalah game aksi-petualangan eksplorasi **2D side-scrolling** yang dipadukan dengan pertarungan kartu taktis berbasis giliran (**turn-based deckbuilding**). Dibangun dalam waktu **48 jam** untuk ajang **Hack Club** dengan tema **"Bounce Back"**.
 
 ---
 

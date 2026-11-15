@@ -50,7 +50,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.3, 0.17, 0.06, 1)
 theme_override_font_sizes/font_size = 72
 theme_override_fonts/font = ExtResource("9_fontb")
-text = "ECHOES BACK"
+text = "MEMOIRE"
 horizontal_alignment = 1
 
 [node name="MenuButton" type="Button" parent="Center/VBox"]

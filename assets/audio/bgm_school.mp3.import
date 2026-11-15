@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/bgm_school.mp3-eb562277894f6bcac49b94d7cf8294
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

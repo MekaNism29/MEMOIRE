@@ -1,4 +1,4 @@
-# Echoes Back - Catatan Pengembangan
+# MEMOIRE - Catatan Pengembangan
 
 Game 2D side-scrolling + battle kartu, dibuat di Godot 4.7 (renderer GL Compatibility, jadi bisa di-export ke Web/itch.io).
 Cara jalanin: buka Godot, Import, pilih `project.godot`, tekan F5.

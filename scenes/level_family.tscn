@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lvl"]
+[ext_resource type="PackedScene" path="res://scenes/platform.tscn" id="2_plat"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://scenes/exploration_hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" path="res://scenes/boss_gate.tscn" id="6_gate"]
+[ext_resource type="PackedScene" path="res://scenes/portal.tscn" id="7_portal"]
+[ext_resource type="PackedScene" path="res://scenes/wake_light.tscn" id="8_wake"]
+
+[node name="LevelFamily" type="Node2D"]
+script = ExtResource("1_lvl")
+layer_id = "family"
+layer_title = "LAPISAN KELUARGA"
+world_width = 2420
+bg_color = Color(0.08, 0.07, 0.1, 1)
+decor_color = Color(0.15, 0.12, 0.17, 1)
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="P1" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(0.0, 640)
+size = Vector2(560.0, 80)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P2" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(467.5, 640)
+size = Vector2(520.0, 80)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P3" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(907.5, 640)
+size = Vector2(480.0, 80)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P4" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1325.5, 640)
+size = Vector2(560.0, 80)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P5" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1798.5, 640)
+size = Vector2(904.0, 80)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P6" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(550.0, 540)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P7" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(660.0, 450)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P8" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(770.0, 360)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P9" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(990.0, 520)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P10" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1100.0, 430)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P11" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1430.0, 540)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P12" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1540.0, 450)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P13" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1650.0, 540)
+size = Vector2(112.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="P14" parent="Platforms" instance=ExtResource("2_plat")]
+position = Vector2(1925.0, 540)
+size = Vector2(96.0, 24)
+color = Color(0.35, 0.28, 0.32, 1)
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="BossGate" parent="Interactables" instance=ExtResource("6_gate")]
+position = Vector2(2310.0, 530)
+boss_id = "boss_family"
+
+[node name="ReturnPortal" parent="Interactables" instance=ExtResource("7_portal")]
+position = Vector2(143.0, 540)
+target_scene = "res://scenes/hub.tscn"
+door_name = "Alam Bawah Sadar"
+door_color = Color(0.6, 0.7, 1.0, 1)
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(66.0, 616)
+
+[node name="BossSpawn" type="Marker2D" parent="."]
+position = Vector2(2035.0, 616)
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="C1" type="Marker2D" parent="Checkpoints"]
+position = Vector2(495.0, 616)
+
+[node name="C2" type="Marker2D" parent="Checkpoints"]
+position = Vector2(935.0, 616)
+
+[node name="C3" type="Marker2D" parent="Checkpoints"]
+position = Vector2(1353.0, 616)
+
+[node name="C4" type="Marker2D" parent="Checkpoints"]
+position = Vector2(1826.0, 616)
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+
+[node name="HUD" parent="." instance=ExtResource("4_hud")]

@@ -1,0 +1,57 @@
+{
+  "bosses": [
+	{
+	  "id": "boss_school",
+	  "layer": "school",
+	  "name": "Bayangan Papan Tulis",
+	  "hp": 22,
+	  "flashback": "Rasanya kamu kembali ke ruangan yang penuh dengan rasa kecewa dan amarah, semua wangi dan suara itu merasuki tubuhmu",
+	  "pattern": "constant_shift",
+	  "params": {
+		"shift": -2
+	  },
+	  "reward_card": "kepingan_tekad",
+	  "glow": [
+		0.55,
+		0.75,
+		1.0
+	  ]
+	},
+	{
+	  "id": "boss_family",
+	  "layer": "family",
+	  "name": "Meja Makan Sunyi",
+	  "hp": 27,
+	  "flashback": "Detak jam dinding di ruang makan yang sepi. Ada kalimat penting yang selalu hampir terucap... dan tak pernah sampai.",
+	  "pattern": "alternating_shift",
+	  "params": {
+		"shift_a": -1,
+		"shift_b": 1
+	  },
+	  "reward_card": "kepingan_hangat",
+	  "glow": [
+		1.0,
+		0.75,
+		0.5
+	  ]
+	},
+	{
+	  "id": "boss_childhood",
+	  "layer": "childhood",
+	  "name": "Cermin Retak",
+	  "hp": 32,
+	  "flashback": "Sosok kecil bersembunyi di sudut kamar yang gelap, terlalu takut untuk melangkah keluar. Ia menatapmu dari balik retakan.",
+	  "pattern": "mirror_push",
+	  "params": {
+		"push": 2,
+		"mirror_divisor": 6
+	  },
+	  "reward_card": "kepingan_terima",
+	  "glow": [
+		0.8,
+		0.65,
+		1.0
+	  ]
+	}
+  ]
+}

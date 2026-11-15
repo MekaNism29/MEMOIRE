@@ -1,0 +1,106 @@
+{
+  "starting_deck": [
+    "marah",
+    "marah",
+    "tenang",
+    "tenang",
+    "rindu",
+    "rindu",
+    "takut",
+    "bangga",
+    "kecewa",
+    "lega"
+  ],
+  "cards": [
+    {
+      "id": "marah",
+      "name": "Marah",
+      "origin": "Dasar",
+      "cost": 1,
+      "desc": "4 Damage ke bos.\nBalance +3.",
+      "damage": 4,
+      "balance_shift": 3
+    },
+    {
+      "id": "tenang",
+      "name": "Tenang",
+      "origin": "Dasar",
+      "cost": 1,
+      "desc": "+4 Shield.\nTarik Balance 2 poin mendekati 0.",
+      "shield": 4,
+      "balance_pull": 2
+    },
+    {
+      "id": "rindu",
+      "name": "Rindu",
+      "origin": "Dasar",
+      "cost": 1,
+      "desc": "2 Damage, tarik 1 kartu. Balance -1.",
+      "damage": 2,
+      "draw": 1,
+      "balance_shift": -1
+    },
+    {
+      "id": "takut",
+      "name": "Takut",
+      "origin": "Dasar",
+      "cost": 0,
+      "desc": "+2 Energi.\nBalance -3.",
+      "energy_gain": 2,
+      "balance_shift": -3
+    },
+    {
+      "id": "bangga",
+      "name": "Bangga",
+      "origin": "Dasar",
+      "cost": 2,
+      "desc": "7 Damage + 3 Shield. Balance +2.",
+      "damage": 7,
+      "shield": 3,
+      "balance_shift": 2
+    },
+    {
+      "id": "kecewa",
+      "name": "Kecewa",
+      "origin": "Dasar",
+      "cost": 1,
+      "desc": "Kurangi dorongan bos berikutnya 3 poin. Balance -2.",
+      "boss_attack_reduction": 3,
+      "balance_shift": -2
+    },
+    {
+      "id": "lega",
+      "name": "Lega",
+      "origin": "Dasar",
+      "cost": 1,
+      "desc": "Tarik Balance 3 poin mendekati 0.",
+      "balance_pull": 3
+    },
+    {
+      "id": "kepingan_tekad",
+      "name": "Kepingan Tekad",
+      "origin": "Bos 1",
+      "cost": 1,
+      "desc": "Ubah tiap poin Balance negatif menjadi +1 Shield.",
+      "shield_from_negative": true
+    },
+    {
+      "id": "kepingan_hangat",
+      "name": "Kepingan Hangat",
+      "origin": "Bos 2",
+      "cost": 1,
+      "desc": "Pulihkan Balance langsung ke 0.\nTarik 2 kartu.",
+      "set_balance_zero": true,
+      "draw": 2
+    },
+    {
+      "id": "kepingan_terima",
+      "name": "Kepingan Terima",
+      "origin": "Bos 3",
+      "cost": 2,
+      "desc": "12 Damage murni.\nBalance langsung ke 0 dari posisi mana pun.",
+      "damage": 12,
+      "set_balance_zero": true
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dc4jy4r07h66k"]
+
+[ext_resource type="Script" uid="uid://bkr1jhb6hu46" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="FontVariation" path="res://assets/ui/font_bold.tres" id="9_fontb"]
+
+[node name="MainMenu" type="Control" unique_id=1341993143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="BG" type="ColorRect" parent="." unique_id=227313900]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.06, 0.09, 1)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1595084549]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center" unique_id=205257121]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="Center/VBox" unique_id=924875506]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.8, 0.45, 1)
+theme_override_fonts/font = ExtResource("9_fontb")
+theme_override_font_sizes/font_size = 76
+text = "MEMOIRE"
+horizontal_alignment = 1
+
+[node name="Quote" type="Label" parent="Center/VBox" unique_id=392500845]
+custom_minimum_size = Vector2(820, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.67, 0.85, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer" type="Control" parent="Center/VBox" unique_id=2068586081]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Center/VBox" unique_id=1463139268]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 54)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Mulai"
+
+[node name="HowToButton" type="Button" parent="Center/VBox" unique_id=1548385575]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 54)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Cara Bermain"
+
+[node name="QuitButton" type="Button" parent="Center/VBox" unique_id=1895704931]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 54)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Keluar"
+
+[node name="HowToLabel" type="Label" parent="Center/VBox" unique_id=1281588667]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(820, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "A / D atau Panah: bergerak     Space / W: lompat     E / Enter: interaksi (Try to Remember, ambil Kepingan)
+
+Di pertarungan, klik kartu untuk memainkannya. Tiap giliran: 3 Energi, 4 kartu.
+Jaga jarum pendulum Emotional Balance (-10..+10). Jika menyentuh -10 atau +10 saat giliran musuh berakhir, kamu kalah.
+Saat Balance di -7..-9, tombol BOUNCE BACK menyala: korbankan 1 kartu untuk memantul ke +1 dan melepaskan Recoil Damage."
+horizontal_alignment = 1
+autowrap_mode = 3

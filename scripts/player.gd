@@ -72,9 +72,9 @@ func _physics_process(delta: float) -> void:
 func update_animation() -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
-			animated_sprite.play("jump")
+			pass
 		else:
-			animated_sprite.play("fall")
+			pass
 	elif absf(velocity.x) > 20.0:
 		animated_sprite.play("walk")
 	else:

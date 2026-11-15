@@ -10,6 +10,8 @@ const BACKGROUND := preload("res://assets/temporary/echoes_background_temp.png")
 @export var kill_y := 900.0
 @export var bg_color := Color(0.05, 0.06, 0.09)
 @export var decor_color := Color(0.1, 0.12, 0.18)
+## Drag your own background image here (Inspector). Empty = old temporary background.
+@export var background: Texture2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var spawn: Marker2D = $Spawn
@@ -55,9 +57,23 @@ func _draw() -> void:
         "family": tint = Color(1.0, 0.78, 0.62, 1.0)
         "childhood": tint = Color(0.83, 0.72, 1.0, 1.0)
         "hub": tint = Color(0.76, 0.82, 0.94, 1.0)
+    var tex: Texture2D = BACKGROUND
+    if background != null:
+        tex = background
+        tint = Color(1, 1, 1, 1)
+    # scale to screen height (720), keep the aspect ratio, repeat to the right.
+    # every 2nd tile is mirrored so the seam between tiles is invisible.
+    var tile_w: float = tex.get_width() * 720.0 / tex.get_height()
     var x := 0.0
+    var i := 0
     while x < world_width:
-        draw_texture_rect(BACKGROUND, Rect2(x, 0, 640, 720), false, tint)
-        x += 640.0
+        if background != null and i % 2 == 1:
+            draw_set_transform(Vector2(x + tile_w, 0), 0.0, Vector2(-1, 1))
+            draw_texture_rect(tex, Rect2(0, 0, tile_w, 720), false, tint)
+            draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+        else:
+            draw_texture_rect(tex, Rect2(x, 0, tile_w + 1.0, 720), false, tint)
+        x += tile_w
+        i += 1
     # A restrained dark wash keeps the player and platforms readable.
     draw_rect(Rect2(0, 0, world_width, 720), Color(0.025, 0.035, 0.06, 0.20), true)

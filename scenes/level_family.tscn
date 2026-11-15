@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_lvl"]
 [ext_resource type="PackedScene" path="res://scenes/platform.tscn" id="2_plat"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://scenes/boss_gate.tscn" id="6_gate"]
 [ext_resource type="PackedScene" path="res://scenes/portal.tscn" id="7_portal"]
 [ext_resource type="PackedScene" path="res://scenes/wake_light.tscn" id="8_wake"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/living.jpg.jpeg" id="9_bg"]
 
 [node name="LevelFamily" type="Node2D"]
 script = ExtResource("1_lvl")
@@ -15,6 +16,7 @@ layer_title = "LAPISAN KELUARGA"
 world_width = 2420
 bg_color = Color(0.08, 0.07, 0.1, 1)
 decor_color = Color(0.15, 0.12, 0.17, 1)
+background = ExtResource("9_bg")
 
 [node name="Platforms" type="Node2D" parent="."]
 
